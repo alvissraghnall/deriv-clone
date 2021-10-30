@@ -4,6 +4,7 @@ import { mdiMenu } from "@mdi/js";
 import { Navigate } from "svelte-router-spa";
 import { onMount } from "svelte";
 import Popover from "../NavLinks/Popover.svelte";
+import Markets from "../NavLinks/Markets.svelte";
 
 // style="{width > 996 ? "display: flex;" : "display: none;"}"
 // style={width < 996 ? "display: block;" : "display: none;"}
@@ -55,7 +56,7 @@ function toggleNavigation(){
     <Col class="justify-space-between d-none d-lg-flex" >
       <ul style="width: 100%;" class="d-flex flex-row justify-space-between">
         <li class="nav-item" id="trade"><button class="nav-btn" on:click={navClick}>Trade</button></li><Popover />
-        <li class="nav-item" id="markets"><button class="nav-btn" on:click={navClick}>Markets</button></li><Popover />
+        <li class="nav-item" id="markets"><button class="nav-btn" on:click={navClick}>Markets</button></li><Markets />
         <li class="nav-item" id="about-us"><button class="nav-btn" on:click={navClick}>About Us</button></li><Popover />
         <li class="nav-item" id="resources"><button class="nav-btn" on:click={navClick}>Resources</button></li><Popover />
       </ul>

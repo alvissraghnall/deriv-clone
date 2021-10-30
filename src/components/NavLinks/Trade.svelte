@@ -30,7 +30,7 @@ let linkCheck = "CFDs" || "Options" || "Multipliers";
 
 <style lang="scss">
 
-.cardtext {
+.cardtext:global {
     line-height: 1.5;
     width: auto;
     font-size: .1em;
