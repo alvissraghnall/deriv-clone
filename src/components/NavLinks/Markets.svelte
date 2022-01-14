@@ -13,18 +13,35 @@
 <Popover target="markets" dismissible placement="bottom">
     <Row class="flex-column">
         {#each rows as row}
-             <Col>
+             <Col class="d-flex">
                 <img
                     src="./assets/{row.name}.svg"
                     alt=""
                     height={32}
                     width={32}
+                    cols={2}
                 />
-                <span class="text-h5 mb-1 black-text pl-3 font-weight-bold">{row.name}</span>
-                <p style="width: 100%; font-size: 1.1em;" class="text--disabled ml-2 grey-text text-lighten-1 cardtext font-weight-light">
+                <Col>
+                    <span class="text-h5 mb-1 black-text pl-3 font-weight-bold title" >{row.name}</span>
+                    <p style="width: 100%; font-size: 1.1em;" class="text--disabled ml-2 grey-text text-lighten-1 cardtext font-weight-light">
                     {row.text}
-                </p>
+                    </p>
+                </Col>
              </Col>
         {/each}
     </Row>
 </Popover>
+
+<style lang="scss">
+    .title {
+        font-size: .9rem !important;
+    }
+    .cardtext {
+        font-size: .85rem !important;
+        transition: color .7s ease;
+        
+        &:hover {
+            color: #222220 !important;
+        }
+    }
+</style>

@@ -7,7 +7,7 @@ let linkCheck = "CFDs" || "Options" || "Multipliers";
 </script>
 
 {#each items as item}
-<Navigate to={ item.name === linkCheck ? "/trade-types/{item.name.toLowerCase()}" : "/{item.name.toLowerCase()}"} styles="text-decoration-none hov mt-n4 mb-n7 pb-n8 s-col d-flex width flex-row">
+<Navigate to="{ item.name === linkCheck ? `/trade-types/${item.name.toLowerCase()}` : `/${item.name.toLowerCase()}`}" styles="text-decoration-none hov mt-n4 mb-n7 pb-n8 s-col d-flex width flex-row">
     <Col cols={2} class="ml-n5">
         <img
             src="./assets/{item.name}.svg"
@@ -30,7 +30,7 @@ let linkCheck = "CFDs" || "Options" || "Multipliers";
 
 <style lang="scss">
 
-.cardtext:global {
+.cardtext {
     line-height: 1.5;
     width: auto;
     font-size: .1em;
@@ -38,7 +38,7 @@ let linkCheck = "CFDs" || "Options" || "Multipliers";
     transition: color .5s ease;
 
     &:hover {
-        color: black !important;
+        color: rgb(41, 37, 37) !important;
     }
 }
 

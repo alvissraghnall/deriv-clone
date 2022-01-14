@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import { Row, Col, Button, Icon } from "svelte-materialify";
 import { mdiMenu } from "@mdi/js";
 import { Navigate } from "svelte-router-spa";
@@ -11,6 +11,8 @@ import Markets from "../NavLinks/Markets.svelte";
 
 let width;
 let active = false;
+let popover;
+
 
 const onFocus = e => {
   console.log(e.target);
@@ -20,10 +22,6 @@ const onFocus = e => {
 const navClick = e => {
   e.target.style.background = "#212121";
 }
-
-onMount( async ()=> {
-  width = window.outerWidth;
-})
 
 function toggleNavigation(){
   active = !active;
@@ -55,10 +53,10 @@ function toggleNavigation(){
     </Col>
     <Col class="justify-space-between d-none d-lg-flex" >
       <ul style="width: 100%;" class="d-flex flex-row justify-space-between">
-        <li class="nav-item" id="trade"><button class="nav-btn" on:click={navClick}>Trade</button></li><Popover />
-        <li class="nav-item" id="markets"><button class="nav-btn" on:click={navClick}>Markets</button></li><Markets />
-        <li class="nav-item" id="about-us"><button class="nav-btn" on:click={navClick}>About Us</button></li><Popover />
-        <li class="nav-item" id="resources"><button class="nav-btn" on:click={navClick}>Resources</button></li><Popover />
+        <li class="nav-item" id="trade" tabindex="0"><a href="#" class="nav-btn" on:click={navClick}>Trade</a></li><Popover />
+        <li class="nav-item" id="markets" tabindex="0"><a href="#" class="nav-btn" on:click={navClick}>Markets</a></li><Markets />
+        <li class="nav-item" id="about-us" tabindex="0"><a href="#" class="nav-btn" on:click={navClick}>About Us</a></li><Popover />
+        <li class="nav-item" id="resources" tabindex="0"><a href="#" class="nav-btn" on:click={navClick}>Resources</a></li><Popover />
       </ul>
     </Col>
     <Col>
@@ -113,10 +111,13 @@ function toggleNavigation(){
     border: none;
     padding: 0;
     background: none;
+    color: white !important;
+    text-decoration: none !important;
 
     &:hover {
-      color: red;
+      color: red !important;
       background: #212121;
+      font-weight: bold;
     }
 
   }
