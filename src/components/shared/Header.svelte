@@ -40,13 +40,13 @@ function toggleNavigation(){
         <Icon path={mdiMenu} />
       </Button>
       <div class="font-weight-black title d-flex align-center">
-        <span><img 
-          src="./assets/logo.svg" 
+        <span><img
+          src="./assets/logo.svg"
           height="{width < 996 ? "17" : "27"}"
           width="{width < 996 ? "100" : "160"}"
           alt="DERIV"
           />
-        </span> 
+        </span>
         <span class="ml-2 font-weight-black pipe" style="border-right: 5px solid white; width: 2px; height: 2.57em;"></span>
         <span class="text--secondary ml-3 text-h5"> GET TRADING</span>
       </div>
@@ -55,8 +55,8 @@ function toggleNavigation(){
       <ul style="width: 100%;" class="d-flex flex-row justify-space-between">
         <li class="nav-item" id="trade" tabindex="0"><a href="#" class="nav-btn" on:click={navClick}>Trade</a></li><Popover />
         <li class="nav-item" id="markets" tabindex="0"><a href="#" class="nav-btn" on:click={navClick}>Markets</a></li><Markets />
-        <li class="nav-item" id="about-us" tabindex="0"><a href="#" class="nav-btn" on:click={navClick}>About Us</a></li><Popover />
-        <li class="nav-item" id="resources" tabindex="0"><a href="#" class="nav-btn" on:click={navClick}>Resources</a></li><Popover />
+        <li class="nav-item" id="about-us" tabindex="0"><a href="#" class="nav-btn" on:click={navClick}>About Us</a></li>
+        <li class="nav-item" id="resources" tabindex="0"><a href="#" class="nav-btn" on:click={navClick}>Resources</a></li>
       </ul>
     </Col>
     <Col>
@@ -88,10 +88,10 @@ function toggleNavigation(){
     &:hover {
       text-decoration: none !important;
     }
-    
+
     &:hover:after {
       width: 30%;
-      
+
       // content: "vhv";
     }
   }

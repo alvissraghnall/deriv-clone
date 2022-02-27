@@ -16,8 +16,13 @@
     window.addEventListener(
       "click",
       function (event) {
+        console.log(event.target);
         if (!event.target.closest(".popover")) {
+<<<<<<< HEAD
           console.log("click!");
+=======
+          console.log("closest!");
+>>>>>>> 1f65c97c26041af6c425aa8922462616b8ec813f
           closeModal();
         }
       },
@@ -26,6 +31,9 @@
 
     function closeModal() {
       // popover.style.display = "none";
+      let popover = document.querySelector(".popover");
+      console.log(document.querySelectorAll(".popover"));
+      if()
       document.querySelector(".popover").style.display = "none";
     }
   });
