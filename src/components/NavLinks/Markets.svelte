@@ -44,4 +44,7 @@
             color: #222220 !important;
         }
     }
+    .popover {
+        background: white;
+    }
 </style>

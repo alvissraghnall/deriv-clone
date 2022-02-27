@@ -13,10 +13,11 @@
   import { onMount } from "svelte";
 
   onMount(() => {
-    document.addEventListener(
+    window.addEventListener(
       "click",
       function (event) {
         if (!event.target.closest(".popover")) {
+          console.log("click!");
           closeModal();
         }
       },
