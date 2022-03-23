@@ -1,18 +1,18 @@
 <script lang="ts">
     import { Popover, Row, Col } from "sveltestrap";
-
-    const rows = [
-        {name: "Forex", text: "Trade the world’s largest financial market with popular forex pairs."}, 
-        {name: "Synthetic Indices", text: "Enjoy synthetic markets that emulate real-world market movements."}, 
-        {name: "Cryptocurrencies", text: "Trade with leverage on the price movement of popular crypto-fiat pairs."},
-        {name: "Stocks & indices", text: "Predict broader market trends and diversify your risk with stocks & indices."}, 
-        {name:  "Commodities", text: "Trade natural resources that are central to the world's economy."}
-    ];
+    import { markets } from "../../ts-utils/nav-rows";
+    // const rows = [
+    //     {name: "Forex", text: "Trade the world’s largest financial market with popular forex pairs."}, 
+    //     {name: "Synthetic Indices", text: "Enjoy synthetic markets that emulate real-world market movements."}, 
+    //     {name: "Cryptocurrencies", text: "Trade with leverage on the price movement of popular crypto-fiat pairs."},
+    //     {name: "Stocks & indices", text: "Predict broader market trends and diversify your risk with stocks & indices."}, 
+    //     {name:  "Commodities", text: "Trade natural resources that are central to the world's economy."}
+    // ];
 </script>
 
 <Popover target="markets" dismissible placement="bottom">
     <Row class="flex-column">
-        {#each rows as row}
+        {#each markets as row}
              <Col class="d-flex">
                 <img
                     src="./assets/{row.name}.svg"

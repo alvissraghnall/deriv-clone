@@ -1,7 +1,7 @@
 <script>
 	import {Router} from 'svelte-router-spa'
 	import { routes } from "./routes";
-
+	import "bootstrap/dist/css/bootstrap.min.css";
 </script>
 
 <Router {routes} />

@@ -7,7 +7,7 @@ let linkCheck = "CFDs" || "Options" || "Multipliers";
 </script>
 
 {#each items as item}
-<Navigate to="{ item.name === linkCheck ? `/trade-types/${item.name.toLowerCase()}` : `/${item.name.toLowerCase()}`}" styles="text-decoration-none hov mt-n4 mb-n7 pb-n8 s-col d-flex width flex-row">
+<Navigate to="{ item.name === "CFDs" || item.name === "Options" || item.name === "Multipliers" ? `/trade-types/${item.name.toLowerCase()}` : `/${item.name.toLowerCase()}`}" styles="text-decoration-none hov mt-n4 mb-n7 pb-n8 s-col d-flex width flex-row">
     <Col cols={2} class="ml-n5">
         <img
             src="./assets/{item.name}.svg"
